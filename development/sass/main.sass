@@ -1,0 +1,20 @@
+@import "settings"
+
+html
+	// windows phone - remove 300ms delay
+	-ms-touch-action: manipulation
+	touch-action: manipulation
+
+body
+	min-height: 100vh
+	overflow-y: scroll
+	background: white
+	
+#content
+	max-width: $content-max-width
+	box-sizing: border-box
+	margin: 60px auto 0px
+
+@media screen and (max-width: 780px)
+	#content
+		margin-top: 50px
