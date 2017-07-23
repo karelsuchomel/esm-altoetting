@@ -39,7 +39,7 @@ logoEl.addEventListener('contextmenu', function(ev)
 var showMobileMenuButton = document.getElementById("show-mobile-menu");
 var menuContainerEl = document.getElementById("menu-top-bar-container");
 var dimBGel = document.getElementById("dimm-background");
-var gradientCardEl = document.getElementById("home-intro");
+var zoomOutEl = document.getElementById("mobile-menu-zoom-el");
 var inputCheckBox = document.getElementById("menu-toggle");
 var menuClosed = true;
 
@@ -53,7 +53,7 @@ function toggleMobileMenu ()
 			dimBGel.style.opacity = "1";
 		}, 20 );
 
-		gradientCardEl.style.transform = "scale(0.95)";
+		zoomOutEl.style.transform = "scale(0.95)";
 
 		menuClosed = false;
 		setTimeout( function() {
@@ -65,7 +65,7 @@ function toggleMobileMenu ()
 
 		dimBGel.style.opacity = "0";
 		menuContainerEl.style.animation = "slide-out 0.5s forwards";
-		gradientCardEl.style.transform = "scale(1)";
+		zoomOutEl.style.transform = "scale(1)";
 
 		setTimeout( function() {
 			dimBGel.style.display = "none";

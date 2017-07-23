@@ -29,42 +29,15 @@ function esm_altoetting_theme_setup(){
 	add_theme_support('post-thumbnails');
 	// define image sizes
 	set_post_thumbnail_size( 360, 270, true );
+
+	// selective refresh
+	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 
 add_action('after_setup_theme', 'esm_altoetting_theme_setup');
 
-// customizations (colors)
-require_once('inc/customizations.php');
+// custom settings
+require_once('inc/custom-settings.php');
 
-// add customize option to various page elements
-function esm_altoetting_customize_elements ( $wp_customize ) {
-	$wp_customize->add_section('esm-edit-content', array(
-			'title' => 'Edit content', 
-		));
-
-	$wp_customize->add_setting('esm-home-page-gradient-card-headline', array(
-			'default' => 'Emmanuel School of Mission',
-		));
-
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'esm-home-page-gradient-card-headline-control', array(
-			'label' => 'Headline',
-			'section' => 'esm-edit-content',
-			'settings' => 'esm-home-page-gradient-card-headline'
-		)) );
-
-	$wp_customize->add_setting('esm-home-page-gradient-card-paragraph', array(
-			'default' => 'Die ESM ist eine Evangelisationsschule der Gemeinschaft Emmanuel e.V. die jungen Christen zwischen 18 und 30 Jahren eine katholisch theologische, philosophische und humanistische Ausbildung bietet. Es geht um eine persönliche Bezieh ung zu Gott und um ein Fundament im Glauben, das ins eigene Leben und zu den Menschen unserer Welt ausstrahlt. Ein geistliches und gemeinschaftliches Leben stehen dabei im Mittelpunkt. ',
-		));
-
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'esm-home-page-gradient-card-paragraph-control', array(
-			'label' => 'Paragraph',
-			'section' => 'esm-edit-content',
-			'settings' => 'esm-home-page-gradient-card-paragraph',
-			'type' => 'textarea'
-		)) );
-
-}
-
-add_action( 'customize_register', 'esm_altoetting_customize_elements' );
-
-?>
+// custom colors
+require_once('inc/custom-colors.php');

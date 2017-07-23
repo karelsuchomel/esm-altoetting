@@ -6,6 +6,4 @@
 
 	<?php require_once('template-parts/home-page/home-page-content.php'); ?>
 
-</div>
-
 <?php get_footer();?>

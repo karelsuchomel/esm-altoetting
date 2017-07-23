@@ -1,4 +1,4 @@
-<div id="home-intro" class="gradient-card" style="background-image: url('<?php echo get_bloginfo('template_url'); ?>/assets/images/Home_Intro.jpg');">
+<div id="mobile-menu-zoom-el" class="gradient-card home-intro" style="background-image: url('<?php echo get_bloginfo('template_url'); ?>/assets/images/Home_Intro.jpg');">
 	<div class="card-content">
 	<h1>
 		<?php echo get_theme_mod('esm-home-page-gradient-card-headline'); ?>
