@@ -15,7 +15,9 @@ function toggleMobileMenu ()
 			dimBGel.style.opacity = "1";
 		}, 20 );
 
-		zoomOutEl.style.transform = "scale(0.95)";
+		if ( zoomOutEl != null ) {
+			zoomOutEl.style.transform = "scale(0.95)";
+		}
 
 		menuClosed = false;
 		setTimeout( function() {
@@ -27,7 +29,9 @@ function toggleMobileMenu ()
 
 		dimBGel.style.opacity = "0";
 		menuContainerEl.style.animation = "slide-out 0.5s forwards";
-		zoomOutEl.style.transform = "scale(1)";
+		if ( zoomOutEl != null ) {
+			zoomOutEl.style.transform = "scale(1)";
+		}
 
 		setTimeout( function() {
 			dimBGel.style.display = "none";
