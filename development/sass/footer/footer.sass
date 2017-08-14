@@ -1,78 +1,57 @@
 footer.site-footer
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
 	background: #2D394B
-	padding: 68px 50px
+	padding: 20px 34px
 
-	p.footer-column
-		display: block
-		float: left
-		max-width: 400px
-		margin-right: 102px
+	div.footer-column
+		margin: 14px 0px
+		flex-grow: 1
 
 		// text
 		font-family: 'Montserrat', sans-serif
 		color: #6A727E
 		color: mandy
-		font-weight: 600
-		font-size: 16px
+		font-weight: 400
+		font-size: 14px
 		line-height: 24px
 
-	p.social-links
-		margin-right: 0px
+		p
+			width: 240px
+			margin: 0 auto
+
+	div.social-links
 		a
 			display: block
+			float: right
+			margin-right: 8px
 			img
-				width: 100px
+				width: 60px
 				height: auto
 
-@media screen and(max-width: 930px)
+@media screen and(max-width: 810px)
 	footer.site-footer
-		padding: 50px
+		flex-wrap: wrap
+		div.footer-column
+			flex-basis: 100%
 
-		p.footer-column
-			margin-right: 68px
+			p
+				width: 100%
+				margin: 0px
 
-		p.social-links
-			margin-right: 0px
-
-@media screen and(max-width: 900px)
-	footer.site-footer
-		position: relative
-		min-height: 350px
-		padding: 34px
-
-		p.footer-column
-			margin-right: 34px
-
-		p.social-links
-			position: absolute
-			top: 34px
-			right: 34px
-			margin-right: 0px
-
-@media screen and(max-width: 770px)
-	footer.site-footer
-		p.footer-column
-			margin-right: 0px
-			float: none
+		div.social-links
+			a
+				float: left
 
 @media screen and(max-width: 490px)
 	footer.site-footer
-		p.social-links
-			position: absolute
-			top: auto
-			right: auto
+		div.social-links
 			bottom: 17px
 			left: 34px
 			width: calc(100% - 68px)
 			max-width: 320px
 
 			a
-				float: left
-				margin-right: 2%
-				width: 32%
-
-				img
-					width: 100%
-
 				&:last-of-type
 					margin-right: 0%

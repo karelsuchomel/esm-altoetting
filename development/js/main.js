@@ -10,7 +10,7 @@ function initSoundEffects()
   console.log("initializing sound effects");
 
 	//find all <a></a> elements and add listener
-	const listOfAnchors = document.getElementsByTagName("a");
+	var listOfAnchors = document.getElementsByTagName("a");
 
 	for (var i = listOfAnchors.length - 1; i >= 0; i--) {
 		console.log(listOfAnchors[i]);
@@ -18,7 +18,7 @@ function initSoundEffects()
 	}
 };
 
-const logoEl = document.getElementById("home-page-link");
+var logoEl = document.getElementById("home-page-link");
 var EggCtivator = 0;
 
 logoEl.addEventListener('contextmenu', function(ev) 

@@ -16,14 +16,13 @@
 			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 			<?php the_title(); ?>
 			</a>
-			<span><?php the_time('j/F/Y'); ?></span>
 		</h1>
 	</div>
 
 
 	<div class="content-text">
 		<?php
-		$loaded_content = strip_shortcodes( get_the_content('') );
+		$loaded_content = get_the_content('');
 		echo $loaded_content; 
 		?>
 	</div>

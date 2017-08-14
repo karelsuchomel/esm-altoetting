@@ -1,4 +1,4 @@
-<div id="mobile-menu-zoom-el" class="gradient-card home-intro" style="background-image: url('<?php echo get_bloginfo('template_url'); ?>/assets/images/Home_Intro.jpg');">
+<div id="mobile-menu-zoom-el" class="gradient-card home-intro">
 	<div class="card-content">
 	<h1>
 		<?php echo get_theme_mod('esm-home-page-gradient-card-headline'); ?>
@@ -7,6 +7,48 @@
 		<?php echo get_theme_mod('esm-home-page-gradient-card-paragraph');?>
 	</p>
 	</div>
+</div>
+
+<div id="listing-posts" class="clear-both">
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+	<div class="post-item">
+		<a class="header-image-wrap" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+		<div class="post-header"
+		<?php if ( has_post_thumbnail() ) : ?>
+			<?php
+				$postID = get_post();
+				$postThumbURI = get_the_post_thumbnail_url(); 
+			?>
+
+			style="background-image: url(<?php echo $postThumbURI ?>);"
+
+		<?php endif; ?>
+		>
+		</div>
+		</a>
+
+		<h3>
+			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+			<?php the_title(); ?>
+			</a>
+		</h3>
+
+		<div class="snippet-wrap">
+			<?php
+			$loaded_content = strip_shortcodes( get_the_content('') );
+			echo wp_trim_words( $loaded_content, 25, '...' ); 
+			?>
+		</div>
+	</div>
+	
+	<?php endwhile; ?>
+
+	<?php else : ?>
+	<p><?php _e( 'Could\'t load any post.' ); ?></p>
+	
+<!-- Stop the loop -->
+<?php endif; ?>
 </div>
 
 <div class="four-boxes">
@@ -41,49 +83,6 @@
 		</div>
 	</div>
 </div>
-
-<div id="listing-posts" class="clear-both">
-	<h2>Aktuell</h2>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-	<div class="post-item">
-		<div class="post-header"
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php
-				$postID = get_post();
-				$postThumbURI = get_the_post_thumbnail_url(); 
-			?>
-
-			style="background-image: url(<?php echo $postThumbURI ?>);"
-
-		<?php endif; ?>
-		>
-		</div>
-
-		<h3>
-			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-			<?php the_title(); ?>
-			</a>
-		</h3>
-
-		<div class="snippet-wrap">
-			<span><?php the_time('j/F/Y'); ?></span>
-			<?php
-			$loaded_content = strip_shortcodes( get_the_content('') );
-			echo wp_trim_words( $loaded_content, 25, '...' ); 
-			?>
-		</div>
-	</div>
-	
-	<?php endwhile; ?>
-
-	<?php else : ?>
-	<p><?php _e( 'Could\'t load any post.' ); ?></p>
-	
-<!-- Stop the loop -->
-<?php endif; ?>
-</div>
-<button class="great-button">mehr</button>
 
 <div class="two-boxes">
 	<div class="box interessiere">

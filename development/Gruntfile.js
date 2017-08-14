@@ -12,15 +12,15 @@ module.exports = function(grunt) {
       },
       watchMainJS: {
         files: ['js/*.js', '!js/tpl-specific/**/*.js'],
-        tasks: ['concat:concat_JS'],
+        tasks: ['uglify:main_JS'],
       },
       watchOtherJS: {
         files: ['js/tpl-specific/**/*.js'],
-        tasks: ['concat:concat_COPY'],
+        tasks: ['uglify:tpl_Specific_JS'],
       },
       watchCSS: {
         files: ['../assets/css/main.css'],
-        tasks: ['postcss', 'concat:concat_CSS'],
+        tasks: ['postcss'],
         options: {
           debounceDelay: 5000,
         },
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     sass: {
       main: {
         options: {             // Target options
-          style: 'expanded',   // options: nested, compact, compressed, expanded
+          style: 'compressed',   // options: nested, compact, compressed, expanded
           sourcemap: 'none',   // options: auto, file, inline, none
         },
         files: {               // Dictionary of files
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
       },
       specific: {
         options: {               // Target options
-          style: 'expanded',     // options: nested, compact, compressed, expanded
+          style: 'compressed',     // options: nested, compact, compressed, expanded
           sourcemap: 'none',     // options: auto, file, inline, none
         },
         files: [{                 // Dictionary of files
@@ -65,37 +65,43 @@ module.exports = function(grunt) {
           dest: '../assets/js/',
         }],
       },
-      concat_CSS: { // for appending comments to the start of a file
-        options: {
-          separator: '\n\n',
-        },
-        files: {
-          '../assets/css/main.css': ['sass/comment-header.css', '../assets/css/main.css'],
-        },
-      },
     },
     postcss: {
       options: {
         map: false,
         processors: [
-          require('autoprefixer')({browsers: ['last 20 versions']}),
-          //require('cssnano')() // minify the result
+          require('autoprefixer')({browsers: ['last 20 versions']})
         ]
       },
       dist: {
         src: '../assets/css/*.css'
       }
     },
+    uglify: {
+      main_JS: {
+        files: {
+          '../assets/js/main.js': ['js/*.js'],
+        },
+      },
+      tpl_Specific_JS: {
+        files: [{
+          expand: true,
+          cwd: 'js/tpl-specific/',
+          src: '**/*.js',
+          dest: '../assets/js'
+        }]
+      },
+    },
     'ftp-deploy' : {
       build: {
         auth: {
-          host: 'ftp.hostname.cz',
+          host: 'ftp.esm-altoetting.de',
           port: 21,
           authKey: 'key1'
         },
-        src: ['./'],
-        dest: './',
-        exclusions: ['development/**/*', '.gitignore']
+        src: ['../'],
+        dest: 'wp-content/themes/esm-altoetting/',
+        exclusions: [ '../development', '../.gitignore', '../cmd2', '../.git']
       }
     }
   });
@@ -105,15 +111,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   // compile Sass to CSS
   grunt.loadNpmTasks('grunt-contrib-sass');
-  // concat
-  grunt.loadNpmTasks('grunt-contrib-concat');
   // enable CSS prefixing
   grunt.loadNpmTasks('grunt-postcss');
-  // enable FTP deploy
+  // ftp deploy
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  // minify javascript
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   // set default
-  grunt.registerTask('default', ['sass', 'concat', 'watch', 'postcss']);
+  grunt.registerTask('default', ['sass', 'watch', 'postcss', 'uglify']);
   grunt.registerTask('prefix', ['postcss']);
   grunt.registerTask('ftp', ['ftp-deploy']);
+
 
 };
