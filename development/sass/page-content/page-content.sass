@@ -13,22 +13,26 @@
 		h1
 			position: absolute
 			bottom: 0
-			padding: 68px 120px
+			padding: 68px 120px 44px
 			width: 100%
 			box-sizing: border-box
 			text-align: center
-
-			// animation
-			@extend .showUp-animation-defaults
+			background: linear-gradient(0deg, rgba(45, 57, 75, 1), rgba(45, 57, 75, 0.9), rgba(45, 57, 75, 0.7), rgba(45, 57, 75, 0))
+			margin: 0px
 
 			a
 				// text
+				display: inline-block
 				text-decoration: none
 				font-weight: 600
 				color: white
-				font-size: 64px
-				line-height: 96px
+				font-size: 44px
+				line-height: 64px
 				text-shadow: 0px 0px 5px rgba(0,0,0,0.25)
+				transform: translateY(25px)
+
+				// animation
+				@extend .showUp-animation-defaults
 
 			span
 				display: block
@@ -47,13 +51,17 @@
 		column-count: 2
 		column-gap: 48px
 
+		// animation
+		@extend .showUp-animation-defaults
+		animation-delay: 0.15s
+
 @media screen and(max-width: 960px)
 	#post-container
 		.post-header
 			padding-top: 50%
 
 			h1
-				padding: 68px 68px
+				padding: 68px 68px 44px
 		.content-text
 			padding: 68px
 
@@ -71,9 +79,10 @@
 			padding: 34px
 
 			// text
+			column-count: 1
+			column-gap: 0px
 			font-size: 14px
 			line-height: 21px
-			column-gap: 17px
 
 @media screen and(max-width: 640px)
 	#post-container
@@ -84,11 +93,6 @@
 				// text
 				font-size: 48px
 				line-height: 76px
-		.content-text
-
-			// text
-			column-count: 1
-			column-gap: 0px
 
 
 @media screen and(max-width: 480px)

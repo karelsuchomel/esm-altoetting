@@ -8,6 +8,7 @@ footer.site-footer
 	div.footer-column
 		margin: 14px 0px
 		flex-grow: 1
+		text-align: center
 
 		// text
 		font-family: 'Montserrat', sans-serif
@@ -42,15 +43,14 @@ footer.site-footer
 
 		div.social-links
 			a
-				float: left
+				float: none
+				display: inline-block
 
 @media screen and(max-width: 490px)
 	footer.site-footer
 		div.social-links
 			bottom: 17px
 			left: 34px
-			width: calc(100% - 68px)
-			max-width: 320px
 
 			a
 				&:last-of-type

@@ -30,6 +30,12 @@ function esm_altoetting_theme_setup(){
 	// define image sizes
 	set_post_thumbnail_size( 360, 270, true );
 
+	// add image size for post headers
+	update_option( 'large_size_w', 1280 );
+	update_option( 'large_size_h', 853 );
+	update_option( 'medium_size_w', 640 );
+	update_option( 'medium_size_h', 427 );
+
 	// selective refresh
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
