@@ -9,9 +9,9 @@
 
 	<style type="text/css">
 		#post-container .post-header {
-			background-image: url(<?php echo $postSmallThumbURI ?>);
-			@media sreen and (min-width: 640px) {
-				background-image: url(<?php echo $postLargeThumbURI ?>);
+			background-image: url(<?php echo $postLargeThumbURI ?>);
+			@media sreen and (max-width: 640px) {
+				background-image: url(<?php echo $postSmallThumbURI ?>);
 			}
 		}
 	</style>

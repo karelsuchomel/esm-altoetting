@@ -7,7 +7,7 @@
 					<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo_pul_white.png">
 				</div>
 				<div class="organiztions-wrap">
-					Emmanuel School of Mission <span class="small-dsp-none">|</span><br class="small-dsp-show"> Lateran Universität Rom
+					in Kooperation mit <br class="small-dsp-show">Lateran Universität Rom
 				</div>
 			</div>
 			<div class="footer-column">

@@ -9,6 +9,9 @@ function esm_altoetting_scripts () {
 	wp_register_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', array(), NULL, true );
 	wp_enqueue_script( 'main-js' );
 
+	wp_register_script( 'video-width-resize-js', get_template_directory_uri() . '/assets/js/video-width-resize.js', array( 'jquery' ), NULL, true );
+	wp_enqueue_script( 'video-width-resize-js' );
+
 	// Creates JavaScirpt obejct to localize template URL
 	$wnm_custom = array( 'stylesheet_directory_uri' => get_stylesheet_directory_uri() );
 	wp_localize_script( 'main-js', 'directory_uri', $wnm_custom );
