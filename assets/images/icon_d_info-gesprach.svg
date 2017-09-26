@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 143.9 121.1" style="enable-background:new 0 0 143.9 121.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#84B6E2;}
+	.st1{fill:#FFFFFF;}
+	.st2{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+	.st3{fill:#00A995;}
+	.st4{fill:#2E3949;}
+	.st5{font-family:'Montserrat-Bold';}
+	.st6{font-size:34.9436px;}
+</style>
+<circle class="st0" cx="82.9" cy="60.1" r="59.9"/>
+<ellipse class="st1" cx="93.7" cy="68.6" rx="32.2" ry="30.5"/>
+<g>
+	<defs>
+		<circle id="SVGID_1_" cx="82.9" cy="60.1" r="59.9"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<ellipse class="st2" cx="51" cy="55.5" rx="50.9" ry="44.6"/>
+</g>
+<ellipse class="st3" cx="43.6" cy="52" rx="43.5" ry="38.2"/>
+<circle class="st1" cx="29.4" cy="51.7" r="3.2"/>
+<circle class="st1" cx="43.5" cy="51.7" r="3.2"/>
+<circle class="st1" cx="57.8" cy="51.7" r="3.2"/>
+<path class="st3" d="M8.5,74.6c0,0,0,3.9-4.8,6.8s-0.8,7.4,4.8,6.2s13-4.3,13-4.3L8.5,74.6z"/>
+<g>
+	<text transform="matrix(1 0 0 1 94.9214 82.8301)" class="st4 st5 st6">i</text>
+	<rect x="96" y="63.9" class="st4" width="7.5" height="4.4"/>
+	<rect x="97.4" y="78.4" class="st4" width="7.5" height="4.4"/>
+</g>
+</svg>

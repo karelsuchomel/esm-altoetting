@@ -37,7 +37,11 @@
 		<div class="snippet-wrap">
 			<?php
 			$loaded_content = strip_shortcodes( get_the_content('') );
-			echo wp_trim_words( $loaded_content, 25, '...' ); 
+			$stripped_tags = strip_tags( $loaded_content );
+			echo substr( $stripped_tags, 0, 95 ); 
+			// add rest of the word
+			$rest_of_the_word = preg_split('/\s+/', substr( $stripped_tags, 95, 200 ));
+			echo $rest_of_the_word[0] . "...";
 			?>
 		</div>
 	</div>
@@ -82,6 +86,19 @@
 			</p>
 		</div>
 	</div>
+</div>
+
+<div class="citation-card-container">
+	<div class="citation-marker up"></div>
+	<div class="citation-text">
+		<span class="text">
+			Du sollst den Herrn, deinen Gott, lieben mit ganzem Herzen und ganzeer <br class="hide-on-small-screen">Seele, mit all deiner Kraft und all deinen Gedanken. Und deinen <br class="hide-on-small-screen">Nächsten sollst du lieben wie dich selbst.
+		</span>
+		<span class="author">
+			Lk 10,27
+		</span>
+	</div>
+	<div class="citation-marker down"></div>
 </div>
 
 <div class="two-boxes">

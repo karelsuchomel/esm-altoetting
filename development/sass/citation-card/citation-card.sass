@@ -1,0 +1,62 @@
+.citation-card-container
+	padding: 92px 120px
+	position: relative
+	font-family: 'Montserrat', sans-serif
+
+	.citation-marker
+		position: absolute
+		width: 95px
+		height: 70px
+		background:
+			size: contain
+			image: url('../images/citation-marker.svg')	
+
+	.citation-marker.down
+		left: 120px
+		bottom: 68px
+
+	.citation-marker.up
+		transform: rotate(180deg)
+		right: 120px
+		top: 68px
+
+	.citation-text
+		text-align: center
+		line-height: 24px
+
+		.text
+			margin-bottom: 17px
+
+		.author
+			display: block
+			margin-top: 17px
+
+@media screen and (max-width: 1080px)
+	.citation-card-container
+		padding: 92px 34px
+
+		.citation-marker.down
+			left: 34px
+			bottom: 68px
+
+		.citation-marker.up
+			transform: rotate(180deg)
+			right: 34px
+			top: 68px
+
+@media screen and (max-width: 860px)
+	.citation-card-container
+		padding: 68px 34px 140px
+		.citation-marker.down
+			display: none
+
+		.citation-marker.up
+			position: relative
+			right: 0px
+			top: 0px
+			margin-bottom: 34px
+
+@media screen and (max-width: 640px)
+	.citation-card-container
+		.hide-on-small-screen
+			display: none
