@@ -5,10 +5,27 @@
     <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The Open Graph Protocol -->
-    <meta property="og:title" content="<?php bloginfo('name');?>" />
-    <meta property="og:type" content="video.movie" />
-    <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
-    <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+    <meta property="og:title" content="<?php the_title(); ?>" />
+    <?php 
+    // Create snippet from content
+    $thisPost = get_post(); 
+    $thisPostscontent = apply_filters('the_content', $thisPost->post_content);
+
+    $trimmed = wp_trim_words( $thisPostscontent , $num_words = 55, $more = "..." );
+    ?>
+    <meta property="og:description" content="<?php echo $trimmed; ?>" />
+    <meta property="og:type" content="article" />
+    <?php
+    // Find suiting image
+    $featuredImageID = get_post_meta( $thisPost->ID, "_thumbnail_id", true );
+    if ( $featuredImageID !== "" ) {
+      $attachement = get_post( $featuredImageID );
+      $attachementURI = $attachement->guid;
+    }
+    
+    //$featuredImageURL
+    ?>
+    <meta property="og:image" content="<?php echo $attachementURI; ?>" />
 
     <!-- Links-->
     <!-- Fonts-->
