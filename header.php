@@ -27,6 +27,17 @@
     ?>
     <meta property="og:image" content="<?php echo $attachementURI; ?>" />
 
+    <!-- Google Analytics -->
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src=“https://www.googletagmanager.com/gtag/js?id=UA-107143493-1“></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag(‘js’, new Date());
+
+     gtag(‘config’, ‘UA-107143493-1’);
+    </script>
+
     <!-- Links-->
     <!-- Fonts-->
     <!-- font-family: Montserrat - 400, 600 -->
