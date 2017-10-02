@@ -37,7 +37,7 @@ function esm_altoetting_theme_setup(){
 	update_option( 'large_size_w', 1280 );
 	update_option( 'large_size_h', 853 );
 	update_option( 'medium_size_w', 640 );
-	update_option( 'medium_size_h', 427 );
+	update_option( 'medium_size_h', 640 );
 
 	// selective refresh
 	add_theme_support( 'customize-selective-refresh-widgets' );
