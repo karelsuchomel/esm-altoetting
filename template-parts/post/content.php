@@ -18,19 +18,35 @@
 
 	<?php endif; ?>
 
-	<div class="post-header" id="mobile-menu-zoom-el">
-		<h1>
-			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-			<?php the_title(); ?>
-			</a>
-		</h1>
-	</div>
+	<div class="post-header" id="mobile-menu-zoom-el"></div>
 
+	<div class="content-container clear-both">
+	<h1>
+	<style>
+	.content-container h1 a {
+	<?php
+	// custom font style depending on character count
+	$titleText = get_the_title();
+	if ( strlen($titleText) < 16 )	{
+		echo "font-size: 44px;line-height: 55px;";
+	} elseif ( strlen($titleText) < 46 ) {
+		echo "font-size: 34px;line-height: 40px;";
+	} else {
+		echo "font-size: 22px;line-height: 26px;";
+	}
+	?>
+	}
+	</style>
 
+		<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+		<?php the_title(); ?>
+		</a>
+	</h1>
 	<div class="content-text">
 		<?php
 		the_content('');
 		?>
+	</div>
 	</div>
 	
 	<?php endwhile; ?>

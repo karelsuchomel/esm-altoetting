@@ -12,16 +12,20 @@
 
 	.post-item
 		float: left
-		width: 32%
+		width: calc(33.3333333% - 13.33333334px)
 		box-sizing: border-box
-		margin-right: 2%
+		margin-right: 20px
+		margin-bottom: 40px
 
 		&:hover, &:active
 			.post-header
 				opacity: 0.85
 
-		&:nth-of-type(3)
+		&:nth-of-type(3n)
 			margin-right: 0px
+
+		&:nth-of-type(4n)
+			clear: both
 
 		a.header-image-wrap
 			display: block
@@ -76,10 +80,6 @@ button.great-button
 @media screen and(max-width: 980px)
 	#listing-posts
 		padding: 34px
-
-
-@media screen and(max-width: 980px)
-	#listing-posts
 		.post-item
 			float: none
 			width: 100%

@@ -7,7 +7,7 @@
 
 <div id="content" class="student-werden-container">
 
-<div id="mobile-menu-zoom-el" class="gradient-card std-werd-hero">
+<div id="mobile-menu-zoom-el" class="gradient-card std-werden">
 	<div class="card-content">
 	<h1>
 		Student werden
@@ -40,7 +40,7 @@
 	</div>
 </div>
 
-<div class="gradient-card std-werd-terka">
+<div class="gradient-card std-werden">
 	<div class="card-content">
 	<p>
 		Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen<br> Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel.daraus zu ziehen? Aber wer hat irgend ein Recht, einen Menschen zu tadeln, der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat, oder einen, der Schmerz vermeidet, welcher keine daraus resultierende Freude nach sich zieht?Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur.
@@ -51,7 +51,7 @@
 <div class="headline-text-two-column-card clear-both">
 	<div class="column-text">
 		<h2>
-			Aber, <br class="hide-on-small-screen">ist das alles <br class="hide-on-small-screen">fur mich?
+			Aber,<br class="hide-on-small-screen"> ist das alles<br class="hide-on-small-screen"> fur mich?
 		</h2>
 	</div>
 	<div class="column-text">

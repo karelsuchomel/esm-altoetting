@@ -19,11 +19,6 @@ $allVideos.each(function() {
 jQuery(window).resize(function() {
 
   var newWidth = $fluidEl.width();
-  // if viewport width greather 780px breakpoint, devide newWidth by 2
-  if ( window.innerWidth > 780 ) 
-  {
-    newWidth = newWidth / 2;
-  }
 
   // Resize all videos according to their own aspect ratio
   $allVideos.each(function() {
