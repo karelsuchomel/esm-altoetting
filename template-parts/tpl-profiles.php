@@ -31,13 +31,24 @@
 <h2>Studenten</h2>
 <ul class="clear-both">
 <?php 
+
 	$args = array(
 		'post_type' => 'profile',
 		'posts_per_page' => '1000',
-		'orderby' => 'title',
-		'order' => 'ASC',
-		'meta_key' => 'profile-mission',
-		'meta_value' => 'student'
+		'meta_query' => array(
+			'profile-listing-position' => array(
+				'key' => 'profile-listing-position',
+			),		
+			'profile-mission' => array(
+				'key' => 'profile-mission',
+				'value' => 'student',
+			),	
+		),
+
+		'orderby' => array(
+			'title' => 'ASC',
+			'profile-listing-position' => 'DESC',
+		),
 	);
 	$my_query = new WP_Query( $args );
 
@@ -80,10 +91,20 @@
 	$args = array(
 		'post_type' => 'profile',
 		'posts_per_page' => '1000',
-		'orderby' => 'title',
-		'order' => 'ASC',
-		'meta_key' => 'profile-mission',
-		'meta_value' => 'team'
+		'meta_query' => array(
+			'profile-listing-position' => array(
+				'key' => 'profile-listing-position',
+			),		
+			'profile-mission' => array(
+				'key' => 'profile-mission',
+				'value' => 'team',
+			),	
+		),
+
+		'orderby' => array(
+			'profile-listing-position' => 'DESC',
+			'title' => 'ASC',
+		),
 	);
 	$my_query = new WP_Query( $args );
 

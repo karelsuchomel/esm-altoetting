@@ -1,4 +1,4 @@
-<div id="mobile-menu-zoom-el" class="gradient-card home-intro">
+<div id="mobile-menu-zoom-el" class="gradient-card home-intro" style="background-image: url('<?php echo wp_get_attachment_url(get_theme_mod('esm-home-page-gradient-card-image')); ?>');">
 	<div class="card-content">
 	<h1>
 		<?php echo get_theme_mod('esm-home-page-gradient-card-headline'); ?>
@@ -53,6 +53,7 @@
 	
 <!-- Stop the loop -->
 <?php endif; ?>
+<a class="great-button" href="<?php bloginfo('url'); ?>/aktuelles">mehr</a>
 </div>
 
 <div class="four-boxes">

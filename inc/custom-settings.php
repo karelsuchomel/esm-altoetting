@@ -8,6 +8,10 @@ function homePageGradientCardParagraph() {
 	echo get_theme_mod('esm-home-page-gradient-card-paragraph');
 }
 
+function homePageGradientCardImage() {
+	echo get_theme_mod('esm-home-page-gradient-card-image');
+}
+
 
 // add customize option to various page elements
 function esm_altoetting_customize_elements ( $wp_customize ) {
@@ -49,6 +53,25 @@ function esm_altoetting_customize_elements ( $wp_customize ) {
 			'container_inclusive' => false,
 			'render_callback'     => 'homePageGradientCardParagraph',
 		) );
+
+	$wp_customize->add_setting('esm-home-page-gradient-card-image', array(
+			'default' => '',
+			'transport' => 'postMessage'
+		));
+
+	$wp_customize->add_control( new WP_Customize_Cropped_Image_Control($wp_customize, 'esm-home-page-gradient-card-image-control', array(
+			'label' => 'Image',
+			'section' => 'esm-edit-content',
+			'settings' => 'esm-home-page-gradient-card-image',
+			'width' => '2348',
+			'height' => '1555'
+		)) );
+
+	$wp_customize->selective_refresh->add_partial( 'esm-home-page-gradient-card-image', array(
+		'selector'            => '.home-intro h1',
+		'container_inclusive' => false,
+		'render_callback'     => 'homePageGradientCardImage',
+	) );
 
 }
 
