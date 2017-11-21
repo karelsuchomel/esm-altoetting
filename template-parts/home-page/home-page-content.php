@@ -10,16 +10,24 @@
 </div>
 
 <div id="listing-posts" class="clear-both">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php
+$args = array(
+	'post_type' => 'post',
+	'posts_per_page' => '3',
+	'orderby' => 'date',
+	'order' => 'DESC',
+);
+$my_query = new WP_Query( $args );
+
+if ( $my_query->have_posts() ) : while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
 
 	<div class="post-item">
 		<a class="header-image-wrap" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 		<div class="post-header"
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php
-				$postID = get_post();
-				$postThumbURI = get_the_post_thumbnail_url(); 
-			?>
+		<?php if ( has_post_thumbnail() ) :
+			$postID = get_post();
+			$postThumbURI = get_the_post_thumbnail_url(); 
+		?>
 
 			style="background-image: url(<?php echo $postThumbURI ?>);"
 
