@@ -65,6 +65,14 @@ if ( $my_query->have_posts() ) : while ( $my_query->have_posts() ) : $my_query->
 </div>
 
 <div class="four-boxes">
+	<div class="box cross">
+		<div class="box-content">
+			<h2>Gebet</h2>
+			<p>
+				Eine persönliche Beziehung zu Gott entdecken und vertiefen, durch Gebet, Hl. Messe, Stille, Bibellesen, Exerzitien und mehr.
+			</p>
+		</div>
+	</div>
 	<div class="box ship">
 		<div class="box-content">
 			<h2>Gemeinschaft</h2>
@@ -84,14 +92,6 @@ if ( $my_query->have_posts() ) : while ( $my_query->have_posts() ) : $my_query->
 			<h2>Mission</h2>
 			<p>
 				Die Liebe und Barmherzigkeit Gottes für sich selbst entdecken und lernen, sie in Freude an andere Menschen weiterzugeben.
-			</p>
-		</div>
-	</div>
-	<div class="box cross">
-		<div class="box-content">
-			<h2>Gebet</h2>
-			<p>
-				Eine persönliche Beziehung zu Gott entdecken und vertiefen, durch Gebet, Hl. Messe, Stille, Bibellesen, Exerzitien und mehr.
 			</p>
 		</div>
 	</div>
