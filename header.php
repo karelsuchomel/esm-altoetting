@@ -5,6 +5,11 @@
     <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The Open Graph Protocol -->
+    <?php
+    global $wp;
+    $current_url = home_url(add_query_arg(array(),$wp->request));
+    ?>
+    <meta property="og:url" content="<?php echo $current_url; ?>" />
     <meta property="og:title" content="<?php the_title(); ?>" />
     <?php 
     // Create snippet from content
