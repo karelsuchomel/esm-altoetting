@@ -33,6 +33,9 @@
 		padding: 0px
 		margin: 0px
 		list-style: none
+		display: flex
+		flex-wrap: wrap
+		align-items: stretch
 
 		li
 			float: left
@@ -44,6 +47,8 @@
 
 			&:nth-of-type(3n)
 				margin-right: 0px
+			&:nth-of-type(3n + 1)
+				clear: both
 
 			.profile-picture
 				padding-top: 75%
@@ -52,22 +57,16 @@
 					size: cover
 
 			.profile-text-wrap
-				text-align: center
-				height: 100px
 				padding: 20px 0px
 				box-sizing: border-box
 				position: relative
 
-				.center-verticaly
-					position: absolute
-					top: 50%
-					left: 0
-					width: 100%
-					transform: translateY(-50%)
-
-				span
-					font-size: 14px
-					line-height: 22px
+				span.corp-position-holder
+					margin-top: 6px
+					display: block
+					text-align: center
+					font-size: 13px
+					line-height: 18px
 					color: white
 
 .listing-container.team
@@ -111,9 +110,13 @@
 
 			&:nth-of-type(3n)
 				margin-right: 20px
+			&:nth-of-type(3n + 1)
+				clear: none
 
 			&:nth-of-type(2n)
 				margin-right: 0px
+			&:nth-of-type(2n + 1)
+				clear: both
 
 @media screen and (max-width: 640px)
 	.listing-container

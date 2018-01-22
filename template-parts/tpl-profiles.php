@@ -67,14 +67,12 @@
 
 		endif; ?>
 		<div class="profile-text-wrap">
-			<div class="center-verticaly">
 			<h3>
 				<?php if ( ! empty($lspb_stored_data['profile-personal-title']) ) echo esc_attr( $lspb_stored_data['profile-personal-title'][0] . " " ); ?><?php if ( ! empty($lspb_stored_data['profile-name']) ) echo esc_attr( $lspb_stored_data['profile-name'][0] ); ?>
 			</h3>
 			<span class="corp-position-holder">
 				<?php if ( ! empty($lspb_stored_data['profile-description']) ) echo esc_attr( $lspb_stored_data['profile-description'][0] ); ?>
 			</span>
-			</div>
 		</div>
 	</li>
 
