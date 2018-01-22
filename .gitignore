@@ -1,5 +1,7 @@
 .sass-cache/
 .ftppass
+assets/css/
+assets/js/
 .jshintrc
 node_modules/
 development/node_modules/
