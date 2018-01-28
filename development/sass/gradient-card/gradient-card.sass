@@ -19,7 +19,6 @@
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
-	padding-top: 1px
 
 	.card-content
 		padding: 34px 120px
@@ -49,14 +48,12 @@
 		@extend .showUp-animation-defaults
 		animation-delay: 0.15s
 
-.home-intro
-	background-position: 50% 100%
+.gradient-card.text-align-right
+	&:after
+		content: ""
+		display: block
+		clear: both
 	.card-content
-		margin-top: 340px
-		padding: 100px 120px 40px 120px
-		background: linear-gradient(0deg, #2e394b, rgba(46, 57, 75, 0.7), rgba(46, 57, 75, 0))
-
-	p
-		max-width: 750px
+		float: right
 
 @import "gradient-card-responsive.sass"

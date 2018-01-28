@@ -1,0 +1,149 @@
+.about-page-container
+	.gradient-card .card-content
+		padding: 103px 120px // 120 - 17 = 103
+		max-width: 450px
+
+		h1
+			margin: 17px 0px
+
+.about-page
+	background-position: top left
+
+// front card
+.about-page.front-card
+	background:
+		image: url('../images/about-daniel.png')
+	.card-content
+		background: linear-gradient(90deg, #2e394b, rgba(46, 57, 75, 0.65), rgba(46, 57, 75, 0))
+
+// Two logos segment
+.two-logos-segment
+	.two-logos-content
+		padding: 68px 34px
+
+	.logos-wrap
+		text-align: center
+
+		.organization-logo
+			height: 100px
+			margin: 17px
+
+	span
+		display: block
+		margin: 17px
+		text-align: center
+
+// four cards
+.gradient-card.text-align-right
+	&:after
+		content: ""
+		display: block
+		clear: both
+	.card-content
+		float: right
+
+.gradient-card.cross
+	background:
+		color: #E1B995
+		image: url('../images/home_gebet.jpg')
+		size: 500px
+		position: 100% 0%
+.gradient-card.ship
+	background: #84B6E2
+	background:
+		image: url('../images/home-about_gemeinschaft.png')
+		size: 450px
+		position: 120px 0px
+		repeat: no-repeat
+.gradient-card.book
+	background:
+		color: #E1B995
+		image: url('../images/about_unterricht.jpg')
+		size: cover
+		position: 100% 0%
+.gradient-card.church
+	background: #84B6E2
+	background:
+		image: url('../images/home-about_mission.png')
+		size: 350px
+		position: 0% 0%
+		repeat: no-repeat
+
+.about-page.josefsburg-card
+	background-position: center
+	background:
+		image: url('../images/Josefsburg.jpg')
+	.card-content
+		background: linear-gradient(90deg, #2e394b, rgba(46, 57, 75, 0.65), rgba(46, 57, 75, 0))
+
+.newsletter-subscribe-card
+	.card-content
+		text-align: center
+		padding: 68px 120px 
+		p
+			display: inline-block
+			margin: 17px auto
+			max-width: 640px
+		form
+			input#field
+				display: block
+				margin: 34px auto
+				border: none
+				color: #999
+				font-size: 24px
+				line-height: 36px
+				border-bottom: 1px solid #2e394b
+				text-align: center
+				max-width: 450px
+				width: 100%
+			input#button
+				display: block
+				background: #84B6E2
+				border-radius: 3px
+				text-align: center
+				padding: 16px 48px
+				margin: 34px auto 0px
+				clear: both
+				border: 0px
+				color: white
+				font-weight: 600
+				cursor: pointer
+				transition: 0.2s
+				text-decoration: none
+
+				&:hover, &:active
+					background: #4591D3
+
+@media screen and (max-width: 960px)
+	.about-page-container
+		.gradient-card .card-content
+			padding: 48px 50px
+
+@media screen and (max-width: 780px)
+	.about-page-container
+		.gradient-card .card-content
+			padding: 30px 50px 40px 50px
+			max-width: none
+
+		.std-werd-terka .card-content
+			float: none
+			h1
+				text-align: left
+			p
+				text-align: left
+
+	.about-page.front-card .card-content
+		margin-top: calc(100vw * 0.582758621)
+
+	.about-page.josefsburg-card
+		background-position: top left
+
+@media screen and (max-width: 640px)
+	.about-page-container
+		.gradient-card .card-content
+			padding: 34px
+
+	.about-page
+		.card-content h1
+			font-size: 26px
+			line-height: 34px
