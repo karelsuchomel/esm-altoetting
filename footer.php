@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	<div class="footer-bottom-shelf clear-both">
-		© <?php echo date('Y');?> ESM Altötting | <a href>Impressum</a>
+		© <?php echo date('Y');?> ESM Altötting | <a href="http://www.esm-altoetting.de/impressum/">Impressum</a>
 		<div class="social-icons-wrap clear-both">
 		<a class="icon" href="http://www.emmanuel.de/" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/emmanuel_100.png"></a>
 		<a class="icon" href="https://www.youtube.com/user/ESMAltoetting" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/youtube.svg"></a>
